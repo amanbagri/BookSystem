@@ -13,22 +13,30 @@
 
 	<c:choose>
 		<c:when test="${not empty issuedBook}">
-			<input type="button" value="Issue New Book"
-				onclick="window.location.href='showFormForAdd'; return false;"
-				class="add-button" />
-			<form:form action="search" method="GET">
+			<div class="row">
+				<div class="col-sm-4">
+					<input type="button" value="Issue New Book"
+						onclick="window.location.href='showFormForAdd'; return false;"
+						class="add-button" />
+				</div>
+				<div class="col-sm-4">
+					<form:form action="search" method="GET">
                 Search IssuedBook By user: <input type="number"
-					name="userid" />
+							name="userid" />
 
-				<input type="submit" value="Search" class="add-button" />
-			</form:form>
-			<form:form action="searchReserveBookByUser" method="GET">
+						<input type="submit" value="Search" class="add-button" />
+					</form:form>
+				</div>
+				<div class="col-sm-4">
+					<form:form action="searchReserveBookByUser" method="GET">
                 Search ReserveBook By user: <input type="number"
-					name="userid" />
+							name="userid" />
 
-				<input type="submit" value="Search" class="add-button" />
-			</form:form>
-			<table class="table table-hover table-condensed">
+						<input type="submit" value="Search" class="add-button" />
+					</form:form>
+				</div>
+			</div>
+			<table class="table table-hover table-borderd">
 				<thead>
 					<tr>
 						<th>Book Image</th>

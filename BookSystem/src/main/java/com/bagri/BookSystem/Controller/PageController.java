@@ -119,6 +119,7 @@ public class PageController {
 			@RequestParam(name="logout", required = false) String logout) {
 		ModelAndView mv= new ModelAndView("login");
 		mv.addObject("title", "Login");
+		mv.addObject("userClickLogin", true);
 		if(error!=null) {
 			mv.addObject("message", "Username and Password is invalid!");
 		}

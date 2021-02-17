@@ -119,7 +119,7 @@ public class IssuedBookController {
                                     Model theModel) {
 
         ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "IssuedBooksByUser");
+		mv.addObject("title", "ReserveBooksByUser");
 		mv.addObject("userClickReserveBookByUser", true);
 		mv.addObject("issuedBook", issuedBookDAO.searchReserveBookByUser(userid));
 		return mv;

@@ -26,22 +26,22 @@ $(function() {
 		case 'About Us':
 			$('#about').addClass('active');
 			break;
-		case 'Contact Us':
-			$('#contact').addClass('active');
-			break;
 		case 'All Books':
 			$('#listBooks').addClass('active');
 			break;
 		case 'Book Management':
-			$('#manageBook').addClass('active');
+			$('#Book_Management').addClass('active');
 			break;
-		case 'Shopping Cart':
-			$('#userModel').addClass('active');
+		case 'All IssuedBooks':
+			$('#AllIssuedBooks').addClass('active');
+			break;
+		case 'IssuedBooksByUser || ReserveBooksByUser':
+			$('#AllIssuedBooks').addClass('active');
 			break;
 		default:
 			if (menu == "Home")
 				break;
-			$('#listBooks').addClass('active');
+
 			$('#a_' + menu).addClass('active');
 			break;
 	}
@@ -157,10 +157,10 @@ $(function() {
 			},
 			columns: [
 				{ data: 'id' }
-				]
-				});
+			]
+		});
 
-		
+
 	}
 
 
@@ -174,8 +174,10 @@ $(function() {
 		console.log(jsonUrl);
 
 		$booksTable.DataTable({
-			lengthMenu: [[10, 30, 50, -1], ['10 Records', '30 Records', '50 Records', 'ALL']],
-			pageLength: 30,
+			
+				lengthMenu: [[3, 5, 10, -1],
+				['3 Records', '5 Records', '10 Records', 'ALL']],
+				pageLength: 5,
 			ajax: {
 				url: jsonUrl,
 				dataSrc: ''

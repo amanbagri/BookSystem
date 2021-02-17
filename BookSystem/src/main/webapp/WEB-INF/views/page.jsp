@@ -72,6 +72,9 @@
 			<c:if test="${userClickOnHome==true}">
 				<%@include file="home.jsp"%>
 			</c:if>
+			<c:if test="${userClickLogin==true}">
+				<%@include file="login.jsp"%>
+			</c:if>
 			<c:if test="${userClickOnAbout==true}">
 				<%@include file="about.jsp"%>
 			</c:if>

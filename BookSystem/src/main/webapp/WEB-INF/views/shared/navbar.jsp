@@ -4,8 +4,9 @@
 	window.userRole = '${userModel.role}';
 </script>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-top ">
-	<div class="container">
+<nav
+	class="navbar navbar-expand-lg navbar-dark bg-dark navbar-top  ">
+	<div class="container text-center">
 		<a class="navbar-brand" href="${contextRoot}/home">Book Management
 			System</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -13,8 +14,8 @@
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ">
+		<div class="collapse navbar-collapse " id="navbarResponsive">
+			<ul class=" navbar-nav ">
 				<li class="nav-item" id="home"><a class="nav-link"
 					href="${contextRoot}/home">Home <span class="sr-only">(current)</span>
 				</a></li>
@@ -26,14 +27,11 @@
 					href="${contextRoot}/about">About</a></li>
 
 				<security:authorize access="hasAuthority('ADMIN')">
-					<li class="nav-item"><a class="nav-link"
+					<li class="nav-item" id="Book_Management"><a class="nav-link"
 						href="${contextRoot}/manage/book">Manage Books</a></li>
-					<li class="nav-item"><a class="nav-link"
+					<li class="nav-item" id="AllIssuedBooks"><a class="nav-link"
 						href="${contextRoot}/issuedbook/list">Issue Books</a></li>
 				</security:authorize>
-				<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-			</ul>
-			<ul class="navbar-nav  navbar-right">
 				<security:authorize access="isAnonymous()">
 					<li id="signup"><a href="${contextRoot}/membership">Sign
 							Up</a></li>
@@ -55,8 +53,9 @@
 								<li role="separator" class="divider"></li>
 								<li id="cart"><a href="${contextRoot}/cart/issued/books">
 										<span>My Issued Books</span>
-										<li role="separator" class="divider"></li>
-								</a></li><li id="cart"><a href="${contextRoot}/cart/reserve/books">
+										
+								</a></li><li role="separator" class="divider"></li>
+								<li id="cart"><a href="${contextRoot}/cart/reserve/books">
 										<span>My Reserve Books</span>
 								</a></li>
 								<li role="separator" class="divider"></li>

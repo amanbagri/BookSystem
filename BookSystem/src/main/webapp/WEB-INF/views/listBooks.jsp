@@ -1,4 +1,4 @@
-<div class="container" style="background-color:  rgb(158, 167, 162);">
+<div class="container" style="background-color: rgb(158, 167, 162);">
 
 	<div class="row">
 
@@ -12,10 +12,10 @@
 		</div>
 
 		<!-- to display the actual books -->
-		<div class="col-md-10" >
+		<div class="col-md-10">
 
 			<!-- Added breadcrumb component -->
-			<div class="row"style="background-color: rgb(235, 196, 235)">
+			<div class="row" style="background-color: rgb(235, 196, 235)">
 
 				<div class="col-lg-12">
 
@@ -25,7 +25,8 @@
 							window.categoryId = '';
 						</script>
 
-						<ol class="breadcrumb  " style="background-color:  rgb(47, 53, 50);" >
+						<ol class="breadcrumb  "
+							style="background-color: rgb(47, 53, 50);">
 
 
 							<li><a href="${contextRoot}/home">Home</a></li>
@@ -41,7 +42,7 @@
 							window.categoryId = '${category.id}';
 						</script>
 
-						<ol class="breadcrumb " style="background-color:  rgb(47, 53, 50);">
+						<ol class="breadcrumb " style="background-color: rgb(47, 53, 50);">
 
 
 							<li><a href="${contextRoot}/home">Home</a></li>
@@ -61,14 +62,14 @@
 
 			<div class="row">
 
-				<div class="col-xs-12" style="background-color:  rgb(216, 196, 216);">
+				<div class="col-xs-12" style="background-color: rgb(216, 196, 216);">
 					<div class="container-fluid">
-						<div class="table-responsive">
+						<div class="table-responsive ">
 							<table id="bookListTable"
-								class="table table-striped table-borderd">
+								class="table  table-borderd table-hover">
+								<caption>List of Books</caption>
 
-
-								<thead>
+								<thead class="thead-dark">
 
 									<tr>
 										<th></th>
